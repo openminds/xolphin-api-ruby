@@ -29,6 +29,14 @@ module Xolphin
         def dcv_email
           @data["dcvEmail"]
         end
+
+        def dns_cname_value
+          @data["dnsCnameValue"]
+        end
+
+        def dns_record
+          @data["dnsRecord"]
+        end
       end
     end
   end
