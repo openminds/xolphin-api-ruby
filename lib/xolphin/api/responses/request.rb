@@ -94,11 +94,11 @@ module Xolphin
 
         def validations
           @validations ||= begin
-            validations = []
+            validations = {}
 
             if @data["validations"]
-              @data["validations"].each do |validation|
-                validations << RequestValidation.new(validation)
+              @data["validations"].each do |request, validation|
+                validations[request] = RequestValidation.new(validation)
               end
             end
 
