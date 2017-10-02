@@ -124,7 +124,7 @@ describe Xolphin::Api::Responses::Request do
   describe "#validations" do
     it "returns the validations" do
       expect(subject.validations.length).to eq(5)
-      expect(subject.validations.first).to be_instance_of(Xolphin::Api::Responses::RequestValidation)
+      expect(subject.validations.first.last).to be_instance_of(Xolphin::Api::Responses::RequestValidation)
     end
   end
 
